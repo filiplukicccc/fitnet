@@ -218,6 +218,10 @@ strong, em {
 	color: #fff;
 	width: 100%;
 }
+ul.top-nav {
+	display: flex;
+	align-items: center;
+}
 
 .header-inner {
 	position: absolute;
@@ -225,7 +229,7 @@ strong, em {
 	left: 10%;
 	right: 10%;
 	text-align: center;
-	width: 100%;
+	/* width: 100%; */
 }
 
 .header-inner h1.headline {
@@ -234,7 +238,6 @@ strong, em {
 	line-height: 1em;
 	margin: 140px 0 0 0;
 	font-weight: 400;
-	text-align: right;
 }
 .header-inner h1.headline span {
 	color: #f7cc4b;
@@ -289,7 +292,7 @@ strong, em {
 	font-weight: 500;
 }
 .shortDesc {
-	background: rgba(255,255,255,0.5);
+	background: rgba(255,255,255,0.65);
 }
 .top-nav li a:hover {
 	color: black;
@@ -316,9 +319,27 @@ strong, em {
 .emsTraining {
 	color: black;
 }
+@media only screen and (max-width: 1220px) {
+	.pricingWrapp {
+		flex-direction: column;
+	}
+	.pricing {
+		height: auto;
+	}
+	.pricing>ul {
+		display: flex!important;
+		justify-content: center!important;
+	}
+	section {
+		padding: 0px!important;
+	}
+}
 @media only screen and (max-width: 960px) {
 	.nav-collapse {
 		top: 0px;
+	}
+	ul.top-nav {
+		display: block;
 	}
 	.nav-collapse li a {
 		margin: 0;
@@ -408,7 +429,24 @@ strong, em {
 	font-size: 24px;
 	content:"x";
 }
-
+.pricingWrapp {
+	display: flex;
+}
+.leftImage, .rightImage {
+	flex: 1;
+	height: 400px;
+}
+.pricing {
+	flex: 2;
+	height: 400px;
+	padding: 20px;
+}
+.pricing p {
+	color: red;
+	font-weight: 800;
+	text-align: center;
+	font-size: 20px;
+}
 /*Slider*/
 
 .cbp-fwslider {
@@ -423,6 +461,7 @@ strong, em {
 	margin: 0 auto;
 	max-width: 100%;
 	height: 800px;
+	background-size: cover!important;
 }
  
 .cbp-fwslider nav {
@@ -481,12 +520,18 @@ section.parallax-2 {
 section.parallax-3 {
   background-image: url("../images/background-3.jpg");
 }
-
+.emsTraining {
+	font-weight: 400;
+	padding: 35px;
+  padding-top: 0px;
+}
+.emsTraining li {
+	padding: 2px;
+}
 /*Team*/
 
 .team-member {
 	text-align: left;
-	padding-top: 20px;
 }
 .team-member a {
 	padding: 0px 30px 0px 30px;
@@ -507,7 +552,7 @@ p.job-role {
 	margin-top: 6px;
 	padding: 0;
 	color: black;
-	font-weight: 400;
+	font-weight: 500;
 	text-align: left;
 	padding: 35px 30px 0px 35px;
 }
@@ -631,9 +676,9 @@ blockquote span {
 /*Footer*/
 
 .footer {
-	background: #222;
+	background: black;
 	display: block;
-	padding: 40px 0;
+	padding: 10px 0;
 	text-align: center;
 }
 

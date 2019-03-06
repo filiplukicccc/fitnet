@@ -35,11 +35,11 @@
 
 @media only screen and (max-width: 480px) {
 	.header-inner h1.headline {
-		font-size: 60px;
+		font-size: 50px;
 		margin: 80px 0 0 0;
 	}
 	h2 {
-		font-size: 40px;
+		font-size: 35px;
 	}
 	p.subheading {
 		font-size: 14px;
